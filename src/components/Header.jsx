@@ -10,6 +10,7 @@ import EmsCRUD from "../projects/EmsCRUD";
 import EmsProject from "../projects/EmsProject";
 import QuizApp from "../projects/QuizApp";
 import ExpenseTracker from "../projects/ExpenseTracker";
+import Skills from "../skills/Skills";
 
 const Header = () => {
   return (
@@ -46,6 +47,7 @@ const Header = () => {
         <ExpenseTracker />
         <div className="w-[2px] hidden sm:block bg-[#1788ae] absolute top-0 bottom-0 left-1/2 -translate-x-1/2"></div>
       </section>
+      <Skills/>
       <Footer />
     </>
   );
