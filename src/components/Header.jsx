@@ -15,7 +15,7 @@ const Header = () => {
   return (
     <>
       <section className="flex flex-col justify-between h-screen">
-        <header className="flex items-center justify-between w-full px-4 mt-4 max-w-screen-xl mx-auto">
+        <header className="z-10 flex items-center justify-between w-full px-4 mt-4 max-w-screen-xl mx-auto">
           <HeaderLogo />
           <div className="flex gap-4">
             <SunLogo />
@@ -26,6 +26,7 @@ const Header = () => {
             </a>
           </div>
         </header>
+        
         <Dashbaord />
         <div className="relative self-center after:content-[''] after:absolute after:w-[2px] after:h-5 after:bg-[#444] after:left-1/2 after:-translate-x-1/2 after:top-[90px]">
           <button className="bg-[#4595eb] py-2 px-5 rounded font-extrabold bg-gradient-to-l from-[#1595b6] to-[#1f2667e6] relative hover:scale-110 ease-in-out duration-100 group mb-20">
@@ -41,8 +42,8 @@ const Header = () => {
         </h2>
         <EmsProject />
         <EmsCRUD />
-        <QuizApp/>
-        <ExpenseTracker/>
+        <QuizApp />
+        <ExpenseTracker />
         <div className="w-[2px] hidden sm:block bg-[#1788ae] absolute top-0 bottom-0 left-1/2 -translate-x-1/2"></div>
       </section>
       <Footer />

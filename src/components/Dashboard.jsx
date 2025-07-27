@@ -11,7 +11,7 @@ const Profile = () => {
     <>
       <div className="flex -mt-10 relative">
         <div className="w-full px-4 max-w-screen-xl mx-auto">
-          <ProfileLogo className="absolute top-0 left-1/2 -translate-y-1/5 -translate-x-[150px] w-[300px] sm:w-[350px] md:w-[450px] h-auto" />
+          <ProfileLogo className=" absolute top-0 left-1/2 -translate-y-1/5 -translate-x-[150px] w-[300px] sm:w-[350px] md:w-[450px] h-auto" />
           <div className="relative ml-4 md:ml-12">
             <h1 className="text-4xl md:text-[65px] font-['Spartan'] mr-12">
               Anand Kumar
@@ -73,6 +73,7 @@ const Profile = () => {
           </li>
         </ul>
       </div>
+      
     </>
   );
 };
