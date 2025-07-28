@@ -1,4 +1,4 @@
-import React from "react";
+import SkillCategory from "../components/SkillCategory"; // Adjust path as needed
 
 const skills = {
   frontend: [
@@ -19,7 +19,7 @@ const skills = {
     { name: "MySQL", logo: "/icons/mysql.png" },
     { name: "MongoDB", logo: "/icons/mongodb.png" },
     { name: "Node JS", logo: "/icons/nodejs.png" },
-    { name: "Express JS", logo: "/icons/expressjs.png" },
+    { name: "Express JS", logo: "/icons/express.png" },
     { name: "Firebase", logo: "/icons/firebase.png" },
     { name: "GraphQL", logo: "/icons/graphql.png" },
   ],
@@ -55,95 +55,12 @@ const Skills = () => {
           various projects and experiences.
         </p>
 
-        {/* Skill Box Grid */}
+        {/* Grid Layout */}
         <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-10">
-          {/* Frontend */}
-          <div className="border border-[#444] rounded-2xl p-6 bg-[#0f1123] shadow-lg">
-            <h3 className="text-2xl font-semibold text-center mb-6 text-[#cccccc]">
-              Frontend
-            </h3>
-            <div className="grid grid-cols-3 sm:grid-cols-4 gap-4 place-items-center">
-              {skills.frontend.map((skill, i) => (
-                <div
-                  key={i}
-                  className="bg-[#181b32] hover:bg-[#1f2342] w-full px-2 py-2 rounded-xl flex flex-col items-center justify-center transition duration-200"
-                >
-                  <img
-                    src={skill.logo}
-                    alt={skill.name}
-                    className="w-8 h-8 mb-1"
-                  />
-                  <p className="text-sm text-center">{skill.name}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Backend */}
-          <div className="border border-[#444] rounded-2xl p-6 bg-[#0f1123] shadow-lg">
-            <h3 className="text-2xl font-semibold text-center mb-6 text-[#cccccc]">
-              Backend
-            </h3>
-            <div className="grid grid-cols-3 sm:grid-cols-4 gap-4 place-items-center">
-              {skills.backend.map((skill, i) => (
-                <div
-                  key={i}
-                  className="bg-[#181b32] hover:bg-[#1f2342] w-full px-2 py-2 rounded-xl flex flex-col items-center justify-center transition duration-200"
-                >
-                  <img
-                    src={skill.logo}
-                    alt={skill.name}
-                    className="w-8 h-8 mb-1"
-                  />
-                  <p className="text-sm text-center">{skill.name}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Languages */}
-          <div className="border border-[#444] rounded-2xl p-6 bg-[#0f1123] shadow-lg">
-            <h3 className="text-2xl font-semibold text-center mb-6 text-[#cccccc]">
-              Languages
-            </h3>
-            <div className="grid grid-cols-3 sm:grid-cols-4 gap-4 place-items-center">
-              {skills.languages.map((skill, i) => (
-                <div
-                  key={i}
-                  className="bg-[#181b32] hover:bg-[#1f2342] w-full px-2 py-2 rounded-xl flex flex-col items-center justify-center transition duration-200"
-                >
-                  <img
-                    src={skill.logo}
-                    alt={skill.name}
-                    className="w-8 h-8 mb-1"
-                  />
-                  <p className="text-sm text-center">{skill.name}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Tools */}
-          <div className="border border-[#444] rounded-2xl p-6 bg-[#0f1123] shadow-lg">
-            <h3 className="text-2xl font-semibold text-center mb-6 text-[#cccccc]">
-              Tools
-            </h3>
-            <div className="grid grid-cols-3 sm:grid-cols-4 gap-4 place-items-center">
-              {skills.tools.map((skill, i) => (
-                <div
-                  key={i}
-                  className="bg-[#181b32] hover:bg-[#1f2342] w-full px-2 py-2 rounded-xl flex flex-col items-center justify-center transition duration-200"
-                >
-                  <img
-                    src={skill.logo}
-                    alt={skill.name}
-                    className="w-8 h-8 mb-1"
-                  />
-                  <p className="text-sm text-center">{skill.name}</p>
-                </div>
-              ))}
-            </div>
-          </div>
+          <SkillCategory title="Frontend" skills={skills.frontend} />
+          <SkillCategory title="Backend" skills={skills.backend} />
+          <SkillCategory title="Languages" skills={skills.languages} />
+          <SkillCategory title="Tools" skills={skills.tools} />
         </div>
       </div>
     </section>
@@ -151,3 +68,4 @@ const Skills = () => {
 };
 
 export default Skills;
+
