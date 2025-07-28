@@ -1,4 +1,5 @@
-import SkillCategory from "../components/SkillCategory"; // Adjust path as needed
+import SkillGrid from "../components/SkillGrid"; // Adjust path as needed
+import BottomArrow from "../assets/icons/bottom-arrow.svg?react";
 
 const skills = {
   frontend: [
@@ -44,28 +45,34 @@ const skills = {
 
 const Skills = () => {
   return (
-    <section id="skills" className="bg-[#090b1a] text-white py-16 px-4">
-      <div className="max-w-screen-xl mx-auto">
-        <h2 className="text-4xl sm:text-5xl font-extrabold text-center">
-          <span className="text-white">SKILLS</span>
-          <div className="h-1 w-20 bg-purple-600 mx-auto mt-2 rounded-full"></div>
-        </h2>
-        <p className="text-center text-[#b0b2c3] mt-4 max-w-2xl mx-auto">
-          A collection of my technical skills and expertise honed through
-          various projects and experiences.
-        </p>
+    <>
+      <div className="flex justify-center relative self-center after:content-[''] after:absolute after:w-[2px] after:h-5 after:bg-[#444] after:left-1/2 after:-translate-x-1/2 after:top-[90px]">
+        <button className="bg-[#4595eb] py-2 px-5 rounded font-extrabold bg-gradient-to-l from-[#1595b6] to-[#1f2667e6] relative hover:scale-110 ease-in-out duration-100 group mb-20">
+          Skills
+          <BottomArrow className="absolute rotate-90 left-1/2 -translate-x-1/2 top-8 group:hover:-top-9" />
+        </button>
+      </div>{" "}
+      <section id="skills" className="bg-[#111] text-white pb-16 px-4 ">
+        <div className="max-w-screen-xl mx-auto ">
+          <h2 className="text-3xl sm:text-[40px] bg-[#111] relative z-10 font-bold px-4 py-2 w-max mx-auto text-center text-[#1788ae] sm:border-b-2 border-[#1788ae]">
+            Skills
+          </h2>
+          <p className="text-center text-[#b0b2c3] mt-4 max-w-2xl mx-auto">
+            A collection of my technical skills and expertise honed through
+            various projects and experiences.
+          </p>
 
-        {/* Grid Layout */}
-        <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-10">
-          <SkillCategory title="Frontend" skills={skills.frontend} />
-          <SkillCategory title="Backend" skills={skills.backend} />
-          <SkillCategory title="Languages" skills={skills.languages} />
-          <SkillCategory title="Tools" skills={skills.tools} />
+          {/* Grid Layout */}
+          <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-10">
+            <SkillGrid title="Frontend" skills={skills.frontend} />
+            <SkillGrid title="Backend" skills={skills.backend} />
+            <SkillGrid title="Languages" skills={skills.languages} />
+            <SkillGrid title="Tools" skills={skills.tools} />
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 };
 
 export default Skills;
-

@@ -13,8 +13,8 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-[#0f172a] text-white px-6 pt-10 pb-5">
-      <div className="max-w-screen-xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-6">
+    <footer className="bg-[#0f172a] text-white px-6 pt-6 pb-5">
+      <div className="max-w-screen-xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-3">
         {/* Left: Logo */}
         <div className="w-20">
           <FooterLogo className="w-full h-auto" />

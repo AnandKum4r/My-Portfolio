@@ -1,9 +1,6 @@
-// src/components/SkillCategory.js
-import React from "react";
-
-const SkillCategory = ({ title, skills }) => {
+const SkillGrid = ({ title, skills }) => {
   return (
-    <div className="border border-[#444] rounded-2xl p-6 bg-[#0f1123] shadow-lg">
+    <div className="rounded-2xl p-6 bg-[#0f1123] border border-[#444] transition duration-300 drop-shadow-[0_0_10px_rgba(59,130,246,0.3)] hover:drop-shadow-[0_0_20px_rgba(59,130,246,0.6)]">
       <h3 className="text-2xl font-semibold text-center mb-6 text-[#cccccc]">
         {title}
       </h3>
@@ -22,4 +19,4 @@ const SkillCategory = ({ title, skills }) => {
   );
 };
 
-export default SkillCategory;
+export default SkillGrid;
