@@ -27,45 +27,45 @@ const Footer = () => {
               <a
                 href="https://www.linkedin.com/in/anandkum4r/"
                 target="_blank"
-                className="hover:text-white transition"
+                rel="noopener noreferrer"
               >
-                <LinkdedInLogo className="w-6 h-6 hover:scale-110 transition-transform" />
+                <LinkdedInLogo className="w-6 h-6 hover:text-white hover:scale-110 transition-transform duration-300" />
               </a>
             </li>
             <li>
               <a
                 href="https://github.com/AnandKum4r"
                 target="_blank"
-                className="hover:text-white transition"
+                rel="noopener noreferrer"
               >
-                <GitHubLogo className="w-6 h-6 hover:scale-110 transition-transform" />
+                <GitHubLogo className="w-6 h-6 hover:text-white hover:scale-110 transition-transform duration-300" />
               </a>
             </li>
             <li>
               <a
                 href="mailto:anandkr.dev21@gmail.com"
                 target="_blank"
-                className="hover:text-white transition"
+                rel="noopener noreferrer"
               >
-                <EmailLogo className="w-6 h-6 hover:scale-110 transition-transform" />
+                <EmailLogo className="w-6 h-6 hover:text-white hover:scale-110 transition-transform duration-300" />
               </a>
             </li>
             <li>
               <a
                 href="https://www.instagram.com/anandkum4r_/"
                 target="_blank"
-                className="hover:text-white transition"
+                rel="noopener noreferrer"
               >
-                <InstaLogo className="w-6 h-6 hover:scale-110 transition-transform" />
+                <InstaLogo className="w-6 h-6 hover:text-white hover:scale-110 transition-transform duration-300" />
               </a>
             </li>
             <li>
               <a
                 href="https://www.youtube.com/@GeekyAnand"
                 target="_blank"
-                className="hover:text-white transition"
+                rel="noopener noreferrer"
               >
-                <YoutubeLogo className="w-6 h-6 hover:scale-110 transition-transform" />
+                <YoutubeLogo className="w-6 h-6 hover:text-white hover:scale-110 transition-transform duration-300" />
               </a>
             </li>
           </ul>

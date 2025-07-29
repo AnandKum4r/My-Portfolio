@@ -1,4 +1,3 @@
-// components/TopHeader.jsx
 import HeaderLogo from "../assets/images/name-logo-white.svg?react";
 import SunLogo from "../assets/icons/sun.svg?react";
 import MoonLogo from "../assets/icons/moon.svg?react";
