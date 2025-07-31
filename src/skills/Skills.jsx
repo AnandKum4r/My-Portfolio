@@ -5,15 +5,11 @@ const skills = {
   frontend: [
     { name: "HTML", logo: "/icons/html.png" },
     { name: "CSS", logo: "/icons/css.png" },
-    { name: "SASS", logo: "/icons/sass.png" },
     { name: "JavaScript", logo: "/icons/javascript.png" },
     { name: "React JS", logo: "/icons/reactjs.png" },
-    { name: "Angular", logo: "/icons/angular.png" },
     { name: "Redux", logo: "/icons/redux.png" },
     { name: "Next JS", logo: "/icons/nextjs.png" },
     { name: "Tailwind CSS", logo: "/icons/tailwindcss.png" },
-    { name: "GSAP", logo: "/icons/gsap.png" },
-    { name: "Material UI", logo: "/icons/materialui.png" },
     { name: "Bootstrap", logo: "/icons/bootstrap.png" },
   ],
   backend: [
@@ -21,25 +17,17 @@ const skills = {
     { name: "MongoDB", logo: "/icons/mongodb.png" },
     { name: "Node JS", logo: "/icons/nodejs.png" },
     { name: "Express JS", logo: "/icons/express.png" },
-    { name: "Firebase", logo: "/icons/firebase.png" },
-    { name: "GraphQL", logo: "/icons/graphql.png" },
   ],
   languages: [
-    { name: "C", logo: "/icons/c.png" },
     { name: "C++", logo: "/icons/cpp.png" },
-    { name: "Java", logo: "/icons/java.png" },
     { name: "Python", logo: "/icons/python.png" },
-    { name: "C-Sharp", logo: "/icons/csharp.png" },
     { name: "JavaScript", logo: "/icons/javascript.png" },
-    { name: "TypeScript", logo: "/icons/typescript.png" },
   ],
   tools: [
     { name: "Git", logo: "/icons/git.png" },
     { name: "GitHub", logo: "/icons/github.png" },
-    { name: "Postman", logo: "/icons/postman.png" },
-    { name: "Figma", logo: "/icons/figma.png" },
     { name: "VS Code", logo: "/icons/vscode.png" },
-    { name: "Docker", logo: "/icons/docker.png" },
+    { name: "Vercel", logo: "/icons/vercel.png" },
   ],
 };
 
@@ -47,10 +35,13 @@ const Skills = () => {
   return (
     <>
       <div className="flex justify-center relative self-center after:content-[''] after:absolute after:w-[2px] after:h-5 after:bg-[#444] after:left-1/2 after:-translate-x-1/2 after:top-[90px]">
-        <button className="bg-[#4595eb] py-2 px-5 rounded font-extrabold bg-gradient-to-l from-[#1595b6] to-[#1f2667e6] relative hover:scale-110 ease-in-out duration-100 group mb-20">
+        <a
+          href="#skills"
+          className="bg-[#4595eb] py-2 px-5 rounded font-extrabold bg-gradient-to-l from-[#1595b6] to-[#1f2667e6] relative hover:scale-110 ease-in-out duration-200 group mb-20"
+        >
           Skills
-          <BottomArrow className="absolute rotate-90 left-1/2 -translate-x-1/2 top-8 group:hover:-top-9" />
-        </button>
+          <BottomArrow className="absolute rotate-90 left-1/2 -translate-x-1/2 top-8 transition-all duration-300 group-hover:top-6" />
+        </a>
       </div>{" "}
       <section id="skills" className="bg-[#111] text-white pb-16 px-4 ">
         <div className="max-w-screen-xl mx-auto ">

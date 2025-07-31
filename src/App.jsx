@@ -1,10 +1,19 @@
-import React from "react";
-import Header from "./components/Header";
+import TopHeader from "./components/TopHeader";
+import Dashbaord from "./components/Dashboard";
+import LatestWorks from "./components/LatestWorks";
+import Skills from "./skills/Skills";
+import Footer from "./components/Footer";
+import Education from "./education/Education";
 
 const App = () => {
   return (
     <>
-      <Header />
+      <TopHeader />
+      <Dashbaord />
+      <LatestWorks />
+      <Skills />
+      <Education/>
+      <Footer />
     </>
   );
 };
