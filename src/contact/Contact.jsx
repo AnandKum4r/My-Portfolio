@@ -17,7 +17,12 @@ const Contact = () => {
         <div className="flex-1 space-y-6">
           <div>
             <h4 className="text-xl font-semibold text-blue-400 mb-2">Email</h4>
-            <p className="text-[#cccccc]">anandkr.dev21@gmail.com</p>
+            <a
+              href="mailto:anandkr.dev21@gmail.com"
+              className="text-[#cccccc] hover:text-blue-300 transition"
+            >
+              anandkr.dev21@gmail.com
+            </a>
           </div>
 
           <div>
