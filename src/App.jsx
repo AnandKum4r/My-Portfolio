@@ -4,6 +4,10 @@ import LatestWorks from "./components/LatestWorks";
 import Skills from "./skills/Skills";
 import Footer from "./components/Footer";
 import Education from "./education/Education";
+import About from "./about/About";
+import Certificates from "./Certificates/Certificates";
+import Contact from "./contact/Contact";
+
 
 const App = () => {
   return (
@@ -12,7 +16,10 @@ const App = () => {
       <Dashbaord />
       <LatestWorks />
       <Skills />
-      <Education/>
+      <Education />
+      <About />
+      <Certificates/>
+      <Contact/>
       <Footer />
     </>
   );
