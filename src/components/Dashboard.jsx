@@ -16,10 +16,16 @@ const Dashbaord = () => {
               <p className="font-['Merriweather'] italic my-2 md:my-5">
                 MERN Stack Developer
               </p>
-              <button className="bg-[#4595eb] py-2 px-5 rounded font-extrabold bg-gradient-to-l from-[#1595b6] to-[#1f2667e6] relative hover:scale-110 ease-in-out duration-100 group">
-                About Me
-                <RightArrow className="absolute top-1/2 -translate-y-1/2 -right-7 group:hover:-right-8" />
-              </button>
+              <a
+                href="https://drive.google.com/file/d/1t10X2QcjTiJeXxr7qI_VJxwuAUVsU3uU/view?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <button className="bg-[#4595eb] py-2 px-5 rounded font-extrabold bg-gradient-to-l from-[#1595b6] to-[#1f2667e6] relative hover:scale-110 ease-in-out duration-100 group">
+                  View My Resume
+                  <RightArrow className="absolute top-1/2 -translate-y-1/2 -right-7 group:hover:-right-8" />
+                </button>
+              </a>
             </div>
           </div>
           <ul className="ml-auto space-y-6 text-[#b0b2c3] absolute right-5 hidden md:block">

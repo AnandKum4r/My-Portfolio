@@ -25,17 +25,38 @@ const About = () => {
         {/* Description */}
         <div className="text-center md:text-left flex-1">
           <p className="text-[#cccccc] text-base sm:text-lg leading-relaxed">
-            Hello! I’m{" "}
-            <span className="text-blue-400 font-semibold">Anand Kumar</span>, a
-            passionate Frontend Developer from India. I specialize in building
-            modern web interfaces using
+            👋 Hi, I’m{" "}
+            <span className="text-blue-400 font-semibold">Anand Kumar</span> — a
+            B.Tech IT graduate from Madan Mohan Malaviya University of
+            Technology, Gorakhpur and a passionate Full Stack Developer with
+            hands-on experience in the MERN stack:{" "}
             <span className="text-blue-400">
-              {" "}
-              React.js, JavaScript, HTML,
+              MongoDB, Express.js, React.js, and Node.js
+            </span>
+            .
+            <br />
+            <br />
+            💻 I specialize in frontend development, using{" "}
+            <span className="text-blue-400">
+              React.js, HTML, CSS, and JavaScript
             </span>{" "}
-            and <span className="text-blue-400">CSS</span>. I'm currently
-            exploring new technologies and preparing for developer interviews to
-            kickstart my career.
+            to build responsive, user-friendly web applications. I’ve developed
+            multiple projects like an Employee Management System, Food
+            Delivery App, and Quiz App — all focused on enhancing the user
+            experience and UI responsiveness.
+            <br />
+            <br />
+            🛠️ I’m also skilled in backend basics using{" "}
+            <span className="text-blue-400">Node.js</span> and{" "}
+            <span className="text-blue-400">Express.js</span>, along with both
+            relational (<span className="text-blue-400">MySQL</span>) and
+            non-relational (<span className="text-blue-400">MongoDB</span>)
+            databases.
+            <br />
+            <br />
+            🚀 I’m open to opportunities where I can learn, grow, and contribute
+            to impactful projects that make a difference. Let’s connect and
+            build something great together!
           </p>
 
           {/* Info Cards */}
