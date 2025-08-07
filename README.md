@@ -1,12 +1,61 @@
-# React + Vite
+# 💼 Portfolio Website - React Developer Showcase
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+🔗 **Live Demo:** https://anandkum4r.vercel.app/
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 📌 Introduction
 
-## Expanding the ESLint configuration
+This is a **personal portfolio website** built using **React + Vite** and **Tailwind CSS**, designed to showcase my skills, projects, certifications, and educational background. It includes dedicated sections for each aspect of my developer journey — all wrapped in a clean, responsive layout.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## ⚙️ Features
+
+- 👨‍💻 **Dashboard/Home Section:** Brief intro with a professional summary
+- 💼 **Latest Works:** Highlighted recent projects
+- 🧠 **Skills:** Technologies and tools I use
+- 🎓 **Education:** Academic qualifications
+- 📜 **Certificates:** Professional certifications
+- 👤 **About Me:** Personal background and goals
+- 📞 **Contact Form:** Simple way to reach out
+- 📦 **Reusable Components:** Modular, maintainable codebase
+
+---
+
+## 🛠 Technologies Used
+
+- ⚛️ React.js
+- 💨 Tailwind CSS
+- 🧭 React Router
+- ⚡ Vite (Fast dev server & bundler)
+
+---
+
+## 🚀 Installation & Setup
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/AnandKum4r/My-Portfolio.git
+   cd My-Portfolio
+   ```
+
+2. **Install dependencies:**
+   ```bash
+   npm install
+   ```
+
+3. **Run the development server:**
+   ```bash
+   npm run dev
+   ```
+
+4. **Visit in your browser:**
+   [http://localhost:5173](http://localhost:5173)
+
+---
+
+## 🙌 Credits
+
+Built with ❤️ by Anand Kumar — React Developer  
+This project reflects my journey, work, and dedication to web development.
