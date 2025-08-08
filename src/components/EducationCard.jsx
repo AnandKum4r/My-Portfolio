@@ -1,53 +1,86 @@
 const EducationCard = ({
-  title,
-  subtitle,
+  degree,
+  institution,
   description,
   timeline,
-  index,
-  isLast,
+  grade,
+  logo,
+  color = "#459bd5",
+  isLeft = false,
 }) => {
+  const baseShadow = `0 4px 20px ${color}55`;
+  const hoverShadow = `0 6px 30px ${color}aa`;
+
   return (
-    <div className="relative">
-      {/* Timeline lines */}
+    <div
+      className={`flex flex-col sm:flex-row ${
+        isLeft ? "sm:flex-row-reverse" : ""
+      } items-start gap-8 sm:gap-16 mt-10 sm:mt-20`}
+    >
+      {/* Card Section */}
       <div
-        className={`hidden md:block h-[140px] border-b
-        ${index > 0 ? "min-w-96 border-l" : "ml-auto w-40"}
-        ${isLast ? "w-40 mr-auto" : ""} border-blue-500`}
-      />
-      {!isLast && (
-        <div className="hidden md:block min-w-96 h-[140px] border-r border-b border-blue-500" />
-      )}
-
-      {/* Card */}
-      <div
-        className="w-full bg-[#0f1123] border border-[#444] 
-        rounded-2xl p-6 mx-auto md:mx-10 md:absolute top-[70px] mb-8 md:mb-0 
-        transition duration-300 drop-shadow-[0_0_10px_rgba(59,130,246,0.3)] 
-        hover:drop-shadow-[0_0_20px_rgba(59,130,246,0.6)]"
+        className={`w-full sm:w-[75%] flex justify-center sm:justify-${
+          isLeft ? "end" : "start"
+        }`}
       >
-        {/* Top Row */}
-        <div className="flex items-start justify-between gap-4">
-          <div>
-            <h3 className="text-[#cccccc] text-[15px] md:text-lg font-semibold leading-tight">
-              {title}
-            </h3>
-            <p className="text-blue-400 text-xs md:text-sm mt-1">{subtitle}</p>
-          </div>
 
-          <div
-            className="text-[11px] md:text-xs text-sky-100 font-medium bg-[#0f172a] 
-            rounded-full border border-blue-700/60 border-dashed px-4 py-1.5 
-            shadow-sm shadow-blue-900/30"
-          >
-            {timeline}
+        <div
+          className="group w-full transition-transform duration-300 sm:hover:scale-[1.02]"
+          style={{ filter: `drop-shadow(${baseShadow})` }}
+          onMouseEnter={(e) =>
+            (e.currentTarget.style.filter = `drop-shadow(${hoverShadow})`)
+          }
+          onMouseLeave={(e) =>
+            (e.currentTarget.style.filter = `drop-shadow(${baseShadow})`)
+          }
+        >
+          <div className="w-full bg-[#1b1b1b] border border-[#333] rounded-2xl px-6 py-6 text-white">
+            {/* Logo */}
+            {logo && (
+              <div className="flex justify-center mb-4">
+                <img
+                  src={logo}
+                  alt="institution logo"
+                  className="w-16 h-16 sm:w-20 sm:h-20 object-contain rounded-full border border-[#555] bg-white p-1"
+                />
+              </div>
+            )}
+
+            {/* Degree */}
+            <h3
+              className="text-lg sm:text-2xl font-semibold text-center mb-1"
+              style={{ color }}
+            >
+              {degree}
+            </h3>
+
+            {/* Institution */}
+            <p className="text-center text-sm sm:text-base font-medium text-gray-200 mb-1">
+              {institution}
+            </p>
+
+            {/* Timeline */}
+            <p className="text-center text-xs sm:text-sm text-gray-400 mb-1">
+              {timeline}
+            </p>
+
+            {/* Grade */}
+            {grade && (
+              <p className="text-center text-xs sm:text-sm text-gray-300 font-semibold mb-3">
+                {grade}
+              </p>
+            )}
+
+            {/* Description */}
+            <p className="text-justify text-sm sm:text-base text-gray-300 leading-relaxed">
+              {description}
+            </p>
           </div>
         </div>
-
-        {/* Description */}
-        <p className="text-blue-100 text-[12.5px] md:text-sm font-light leading-6 mt-4 tracking-wide">
-          {description}
-        </p>
       </div>
+
+      {/* Spacer for alignment */}
+      <div className="hidden sm:block sm:w-[25%]"></div>
     </div>
   );
 };
