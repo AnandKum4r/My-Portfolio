@@ -1,100 +1,118 @@
-import React from "react";
+import React, { useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Contact = () => {
+  const form = useRef();
+  const [isSent, setIsSent] = useState(false);
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_rjp3bio",
+        "template_fii4cj2",
+        form.current,
+        "WAp4TXPp-4yNMQ5BO"
+      )
+      .then(
+        () => {
+          setIsSent(true);
+          form.current.reset();
+          toast.success("Message sent successfully ✅", {
+            position: "top-right",
+            autoClose: 3000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+          });
+        },
+        (error) => {
+          console.error(error);
+          toast.error("Failed to send message ❌", {
+            position: "top-right",
+            autoClose: 3000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+          });
+        }
+      );
+  };
+
   return (
     <section
       id="contact"
-      className="bg-[#0f1123] text-white py-12 px-4 sm:px-8 md:px-16 lg:px-24 rounded-2xl border border-[#444] my-10 mx-4 drop-shadow-[0_0_10px_rgba(59,130,246,0.3)] hover:drop-shadow-[0_0_20px_rgba(59,130,246,0.6)] transition duration-300"
+      className="bg-gradient-to-br from-[#0f1123] to-[#1b1f3b] text-white py-16 px-4 mx-5 mb-10 sm:px-8 md:px-16 lg:px-24 rounded-3xl border border-[#2b2f4a] shadow-lg shadow-blue-500/20 hover:shadow-blue-500/40 transition duration-500"
     >
+      <ToastContainer />
+
       {/* Section Title */}
-      <h2 className="text-3xl font-bold text-center mb-10 text-[#cccccc]">
-        Contact Me
+      <h2 className="text-4xl font-extrabold text-center mb-4 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">
+        Let’s Work Together
       </h2>
+      <p className="text-center text-gray-400 max-w-2xl mx-auto mb-12">
+        Have a project in mind or just want to say hello? Fill out the form and
+        I’ll get back to you as soon as possible.
+      </p>
 
       {/* Layout */}
-      <div className="flex flex-col md:flex-row gap-10">
-        {/* Contact Info */}
-        <div className="flex-1 space-y-6">
-          <div>
-            <h4 className="text-xl font-semibold text-blue-400 mb-2">Email</h4>
-            <a
-              href="mailto:anandkr.dev21@gmail.com"
-              className="text-[#cccccc] hover:text-blue-300 transition"
-            >
-              anandkr.dev21@gmail.com
-            </a>
-          </div>
-
-          <div>
-            <h4 className="text-xl font-semibold text-blue-400 mb-2">
-              Location
-            </h4>
-            <p className="text-[#cccccc]">Delhi, India</p>
-          </div>
-
-          <div>
-            <h4 className="text-xl font-semibold text-blue-400 mb-2">
-              LinkedIn
-            </h4>
-            <a
-              href="https://linkedin.com/in/AnandKum4r"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-blue-300 hover:underline"
-            >
-              https://linkedin.com/in/AnandKum4r
-            </a>
-          </div>
-
-          <div>
-            <h4 className="text-xl font-semibold text-blue-400 mb-2">
-              Telgram
-            </h4>
-            <a
-              href="https://t.me/AnandKum4r"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-blue-300 hover:underline"
-            >
-              https://t.me/AnandKum4r
-            </a>
-          </div>
-        </div>
+      <div className="flex flex-col md:flex-row gap-12">
 
         {/* Contact Form */}
-        <form className="flex-1 space-y-6">
+        <form
+          ref={form}
+          onSubmit={sendEmail}
+          className="flex-1 space-y-6 bg-[#181b32] p-8 rounded-2xl border border-[#2c2f4a] shadow-md shadow-purple-500/10 hover:shadow-purple-500/30 transition duration-300"
+        >
           <div>
-            <label className="block text-sm mb-1">Your Name</label>
+            <label className="block text-sm mb-2 text-gray-300">
+              Your Name
+            </label>
             <input
               type="text"
-              className="w-full bg-[#181b32] border border-[#333] rounded-lg px-4 py-2 text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+              name="user_name"
+              required
+              className="w-full bg-[#0f1123] border border-[#333] rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-purple-500 transition"
               placeholder="Enter your name"
             />
           </div>
 
           <div>
-            <label className="block text-sm mb-1">Your Email</label>
+            <label className="block text-sm mb-2 text-gray-300">
+              Your Email
+            </label>
             <input
               type="email"
-              className="w-full bg-[#181b32] border border-[#333] rounded-lg px-4 py-2 text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+              name="user_email"
+              required
+              className="w-full bg-[#0f1123] border border-[#333] rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-purple-500 transition"
               placeholder="Enter your email"
             />
           </div>
 
           <div>
-            <label className="block text-sm mb-1">Your Message</label>
+            <label className="block text-sm mb-2 text-gray-300">
+              Your Message
+            </label>
             <textarea
-              rows="4"
-              className="w-full bg-[#181b32] border border-[#333] rounded-lg px-4 py-2 text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+              name="message"
+              rows="5"
+              required
+              className="w-full bg-[#0f1123] border border-[#333] rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-purple-500 transition"
               placeholder="Write your message..."
             ></textarea>
           </div>
 
           <button
             type="submit"
-            className="bg-blue-500 hover:bg-blue-600 text-white px-6 py-2 rounded-lg transition"
+            className="w-full bg-gradient-to-r from-blue-500 to-purple-500 hover:from-purple-500 hover:to-blue-500 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg shadow-blue-500/20 hover:shadow-purple-500/40"
           >
-            Send Message
+            Send Message ✉️
           </button>
         </form>
       </div>
