@@ -5,7 +5,7 @@ import SocialIcons from "./SocialIcons";
 const Dashbaord = () => {
   return (
     <>
-      <section className="mb-35 xl:mb-50 flex-col  justify-between">
+      <section className="pt-60 mb-35 xl:mb-50 flex-col justify-between">
         <div className="flex -mt-10 relative ">
           <div className="w-full px-4 max-w-screen-xl mx-auto">
             <NameLogo className="absolute top-0 left-1/2 -translate-y-1/4 mt-2  -translate-x-[200px] w-[350px] sm:w-[450px] md:w-[500px] h-auto" />
@@ -17,7 +17,7 @@ const Dashbaord = () => {
                 MERN Stack Developer
               </p>
               <a
-                href="https://drive.google.com/file/d/1t10X2QcjTiJeXxr7qI_VJxwuAUVsU3uU/view?usp=sharing"
+                href="https://drive.google.com/file/d/1nOKlKwsW2N1494T2bkm_u7rJFwIJypyw/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -28,7 +28,7 @@ const Dashbaord = () => {
               </a>
             </div>
           </div>
-          <ul className="ml-auto space-y-6 text-[#b0b2c3] absolute right-5 hidden md:block">
+          <ul className="ml-auto space-y-6 text-[#b0b2c3] absolute right-5">
             <SocialIcons className="space-y-6" />
           </ul>
         </div>

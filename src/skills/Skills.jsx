@@ -43,15 +43,14 @@ const Skills = () => {
           <BottomArrow className="absolute rotate-90 left-1/2 -translate-x-1/2 top-8 transition-all duration-300 group-hover:top-6" />
         </a>
       </div>{" "}
-      <section id="skills" className="bg-[#111] text-white pb-16 px-4 ">
+      <section
+        id="skills"
+        className="bg-[#111] text-white pb-8 sm:pb-10 px-4 scroll-mt-23"
+      >
         <div className="max-w-screen-xl mx-auto ">
           <h2 className="text-3xl sm:text-[40px] bg-[#111] relative z-10 font-bold px-4 py-2 w-max mx-auto text-center text-[#1788ae] sm:border-b-2 border-[#1788ae]">
             Skills
           </h2>
-          <p className="text-center text-[#b0b2c3] mt-4 max-w-2xl mx-auto">
-            A collection of my technical skills and expertise honed through
-            various projects and experiences.
-          </p>
 
           {/* Grid Layout */}
           <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-10">

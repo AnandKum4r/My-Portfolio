@@ -13,17 +13,17 @@ const About = () => {
           <BottomArrow className="absolute rotate-90 left-1/2 -translate-x-1/2 top-8 transition-all duration-300 group-hover:top-6" />
         </a>
       </div>
-      <h2 className="mb-10 text-3xl sm:text-[40px] bg-[#111] relative z-10 font-bold px-4 py-2 w-max mx-auto text-center text-[#1788ae] sm:border-b-2 border-[#1788ae]">
-        About Me
-      </h2>
 
       <section
         id="about"
-        className="bg-[#0f1123] text-white mx-4 py-10 px-4 sm:px-8 md:px-16 lg:px-24 rounded-2xl border border-[#444] drop-shadow-[0_0_10px_rgba(59,130,246,0.3)] hover:drop-shadow-[0_0_20px_rgba(59,130,246,0.6)] transition duration-300"
+        className="max-w-screen-xl scroll-mt-23 mx-auto px-4 relative pb-8 sm:pb-10"
       >
+        <h2 className="text-3xl sm:text-[40px] bg-[#111] relative z-10 font-bold px-4 py-2 w-max mx-auto text-center text-[#1788ae] sm:border-b-2 border-[#1788ae]">
+          About Me
+        </h2>
 
         {/* Profile photo and description */}
-        <div className="flex flex-col md:flex-row items-center gap-10">
+        <div className="flex flex-col md:flex-row items-center pt-6 gap-10">
           {/* Profile Image */}
           <div className="flex-shrink-0">
             <img
@@ -87,6 +87,7 @@ const About = () => {
             </div>
           </div>
         </div>
+        
       </section>
     </>
   );

@@ -16,6 +16,7 @@ const SkillGrid = ({ title, skills }) => {
         ))}
       </div>
     </div>
+    
   );
 };
 

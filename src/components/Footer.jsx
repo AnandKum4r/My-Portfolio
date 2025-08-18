@@ -8,7 +8,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-[#0f172a] text-white px-6 pt-6 pb-5">
+    <footer className="bg-[#0f172a] text-white px-6 py-6">
       <div className="max-w-screen-xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-3">
         {/* Left: Logo */}
         <div className="w-20">

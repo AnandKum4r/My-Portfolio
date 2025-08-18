@@ -22,7 +22,7 @@ const Education = () => {
       </div>
       <section
         id="education"
-        className="max-w-screen-xl mx-auto px-4 xl:px-15 relative pb-8 sm:pb-16"
+        className="max-w-screen-xl scroll-mt-23 mx-auto px-4 xl:px-15 relative pb-8 sm:pb-10"
       >
         <h2 className="text-3xl sm:text-[40px] bg-[#111] relative z-10 font-bold px-4 py-2 w-max mx-auto text-center text-[#1788ae] sm:border-b-2 border-[#1788ae]">
           Education
@@ -83,6 +83,7 @@ const Education = () => {
             isLeft={true}
           />
         </div>
+        {/* <div className="w-[2px] hidden sm:block bg-[#1788ae] absolute top-0 bottom-0 left-1/2 -translate-x-1/2"></div> */}
       </section>
     </>
   );

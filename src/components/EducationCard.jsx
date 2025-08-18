@@ -15,7 +15,7 @@ const EducationCard = ({
     <div
       className={`flex flex-col sm:flex-row ${
         isLeft ? "sm:flex-row-reverse" : ""
-      } items-start gap-8 sm:gap-16 mt-10 sm:mt-20`}
+      } items-start gap-8 sm:gap-16 mt-6 sm:mt-10`}
     >
       {/* Card Section */}
       <div
